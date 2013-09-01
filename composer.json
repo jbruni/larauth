@@ -1,6 +1,9 @@
 {
     "name": "jbruni/larauth",
-    "description": "",
+    "description": "Authentication and Authorization Services for Laravel 4",
+    "keywords": ["authentication", "authorization", "login", "logout", "user", "laravel"],
+    "homepage": "http://github.com/jbruni/larauth",
+    "license": "MIT",
     "authors": [
         {
             "name": "J. Bruni",
@@ -9,11 +12,12 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.0.x"
+        "illuminate/support": "4.0.x",
+        "symfony/http-foundation": "dev-master"
     },
     "autoload": {
         "classmap": [
-            "src/migrations"
+            "src/lib"
         ],
         "psr-0": {
             "Jbruni\\Larauth": "src/"
