@@ -1,14 +1,13 @@
-<a id="requirements"></a>
-Requirements
+<a id="requirements"></a>Requirements
 ============
 
 **(1) User Model Class**
 
-\*\*\* Larauth **does not provide** or enforce any specific **user model class** implementation or interface of its own! \*\*\*
+Larauth **does not provide** or enforce any specific **user model class** implementation or interface of its own!
  
 No migrations, no interface, no abstract class. It's **your** user model class.
  
-However, ***your** user model class must extend **Eloquent***. 
+However, **your user model class must extend Eloquent**. 
  
 This is an important requirement, which we may remove at a later time, or not.
  
@@ -133,7 +132,7 @@ The password field - stored as hash - is usually named "password", but your data
 
 ---
 
-> If your model table already follow the defaults ("**User**", "**email**", and "**password**"), you don't need to configure anything. Authentication just works out of the box.
+> If your model table already follow the defaults ("User", "email", and "password"), you don't need to configure anything. Authentication just works out of the box.
 
 ---
 
