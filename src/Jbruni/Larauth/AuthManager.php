@@ -148,7 +148,7 @@ class AuthManager {
 			return false;
 		}
 
-		$authCookie = $_COOKIE[$cookie['name']];
+		$authCookie = \Cookie::get($cookie['name']);
 
 		$parts = explode( '|', $authCookie );
 
@@ -627,6 +627,11 @@ class AuthManager {
 		// it is impossible to authenticate the user.
 		$saltKey = 'larauth.salt_' . $login;
 		$this->app->make( 'cache' )->forget( $saltKey );
+	}
+
+	public function getHasher()
+	{
+			return new PasswordHash( 8, false );
 	}
 }
 
